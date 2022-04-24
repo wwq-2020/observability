@@ -16,7 +16,7 @@ spec:
         app: demo
     spec:
       containers:
-      - image: 172.25.128.89:5000/mydemo:v6
+      - image: yourregistry/metricsdemo:v1
         imagePullPolicy: IfNotPresent
         name: demo
         resources: {}
