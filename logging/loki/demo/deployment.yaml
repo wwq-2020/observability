@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: demo
     spec:
       containers:
-      - image: yourregistry/mydemo:v3
+      - image: yourregistry/mydemo:v1
         imagePullPolicy: IfNotPresent
         name: demo
         resources: {}
