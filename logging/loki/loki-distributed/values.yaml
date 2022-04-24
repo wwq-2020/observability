@@ -869,7 +869,7 @@ gateway:
 # Configuration for the compactor
 compactor:
   # -- Specifies whether compactor should be enabled
-  enabled: false
+  enabled: true
   image:
     # -- The Docker registry for the compactor image. Overrides `loki.image.registry`
     registry: null
