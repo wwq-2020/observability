@@ -9,12 +9,13 @@ metadata:
     {{- toYaml . | nindent 4 }}
     {{- end }}
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
     - name: http
       port: 3100
       targetPort: http
       protocol: TCP
+      nodePort: 30087
     - name: grpc
       port: 9095
       targetPort: grpc
