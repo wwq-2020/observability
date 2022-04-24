@@ -1,4 +1,4 @@
-FROM 172.25.128.89:5000/golang:alpine
+FROM golang:alpine
 
 WORKDIR /app
 

@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: demo
     spec:
       containers:
-      - image: 172.25.128.89:5000/mydemo:v3
+      - image: yourregistry/mydemo:v3
         imagePullPolicy: IfNotPresent
         name: demo
         resources: {}
