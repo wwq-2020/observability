@@ -1,0 +1,2 @@
+ruler
+alertmanager持久化
