@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/instance: demo
+    app.kubernetes.io/managed-by: hand
+    app.kubernetes.io/name: demo
+  name: demo
+  namespace: myns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: demo
+      app.kubernetes.io/name: demo
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/instance: demo
+        app.kubernetes.io/name: demo
+    spec:
+      containers:
+      - image: 172.25.128.89:5000/mydemo:v3
+        imagePullPolicy: IfNotPresent
+        name: demo
+        resources: {}
+        securityContext: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: docker-config
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
