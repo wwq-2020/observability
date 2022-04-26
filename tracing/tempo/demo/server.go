@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"time"
@@ -54,7 +54,7 @@ func main() {
 			ctx,
 			"serve hello")
 		defer span.End()
-		fmt.Println(span.SpanContext().TraceID())
+		io.WriteString(w, span.SpanContext().TraceID().String())
 
 		time.Sleep(time.Second)
 	})
