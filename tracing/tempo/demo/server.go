@@ -18,7 +18,6 @@ import (
 
 func initProvider() func() {
 	ctx := context.Background()
-
 	res, err := resource.New(ctx,
 		resource.WithFromEnv(),
 	)
